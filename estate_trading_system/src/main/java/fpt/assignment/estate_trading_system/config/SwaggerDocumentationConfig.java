@@ -1,9 +1,11 @@
 package fpt.assignment.estate_trading_system.config;
 
 
+import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springdoc.core.properties.SpringDocConfigProperties;
 import org.springdoc.core.properties.SwaggerUiConfigParameters;
 import org.springdoc.core.properties.SwaggerUiConfigProperties;
@@ -66,7 +68,9 @@ public class SwaggerDocumentationConfig {
                     .name("MIT License")
                     .url("https://choosealicense.com/licenses/mit/"))
                 .contact(new io.swagger.v3.oas.models.info.Contact()
-                    .email("luugiavinh0@gmail.com")));
+                    .email("luugiavinh0@gmail.com")))
+                .components(new Components().addSecuritySchemes("basicScheme", new SecurityScheme()
+                        .type(SecurityScheme.Type.HTTP).scheme("basic")));
     }
 
 }
