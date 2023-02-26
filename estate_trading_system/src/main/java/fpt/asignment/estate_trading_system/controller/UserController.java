@@ -20,7 +20,6 @@ public class UserController {
     @Operation(summary = "Get user", description = "Get user", tags={ "User" })
     @RequestMapping(value = "/user/getUser",
             produces = { "application/json" },
-            consumes = { "application/json" },
             method = RequestMethod.GET)
     public ResponseEntity<Users> getUsersDetailTest() {
         return ResponseEntity.status(HttpStatus.OK).body(userRepository.findByUsername("admin"));

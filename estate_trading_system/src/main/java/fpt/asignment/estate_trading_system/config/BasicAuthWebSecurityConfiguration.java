@@ -31,8 +31,8 @@ public class BasicAuthWebSecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.csrf().disable().authorizeHttpRequests()
-                .requestMatchers("/user/getUser").authenticated()
+        http.csrf().disable().authorizeRequests()
+                .requestMatchers("/user/**").authenticated()
                 .and().httpBasic().and().exceptionHandling().authenticationEntryPoint(myBasicAuthenticationEntryPoint);
         return http.build();
     }
