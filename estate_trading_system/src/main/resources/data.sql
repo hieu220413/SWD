@@ -1,2 +1,6 @@
-INSERT INTO `swd_system`.`role` (`id`,`name`) VALUES (UUID_TO_BIN(UUID()),'ADMIN');
-INSERT INTO `swd_system`.`role` (`id`,`name`) VALUES (UUID_TO_BIN(UUID()),'USER');
+INSERT INTO `swd_system`.`role` (`id`,`name`) VALUES (UUID_TO_BIN('2a124aa5-b5dd-11ed-86dc-0a0027000019'),'ADMIN');
+INSERT INTO `swd_system`.`role` (`id`,`name`) VALUES (UUID_TO_BIN('3ec14b5b-b5dd-11ed-86dc-0a0027000019'),'USER');
+
+INSERT INTO `swd_system`.`users` (`id`,`age`,`avatar`,`email`,`full_name`,`gender`,`password`,`phone`,`status`,`username`,`role_id`) VALUES (UUID_TO_BIN('647c13b5-b5df-11ed-86dc-0a0027000019'),20,'image.jpg','hieu@gmail.com','Nguyen Trung Hieu',0,'$2a$10$aAOvivh9bdBpwyH5bZufmuZXPrKAUmofsFHvl76snnKxzZNWaVJee','1234509876',1,'hieu',UUID_TO_BIN('3ec14b5b-b5dd-11ed-86dc-0a0027000019'));
+INSERT INTO `swd_system`.`users` (`id`,`age`,`avatar`,`email`,`full_name`,`gender`,`password`,`phone`,`status`,`username`,`role_id`) VALUES (UUID_TO_BIN('48c9e1bc-b5dd-11ed-86dc-0a0027000019'),20,'image.jpg','admin@gmail.com','This is admin',0,'$2a$10$uzzMvO13fgZE632L9zGNT.Gnxcb8/oaxf7O2YHNDWllFP3YSDyKG6','1234567890',1,'admin',UUID_TO_BIN('2a124aa5-b5dd-11ed-86dc-0a0027000019'));
+INSERT INTO `swd_system`.`users` (`id`,`age`,`avatar`,`email`,`full_name`,`gender`,`password`,`phone`,`status`,`username`,`role_id`) VALUES (UUID_TO_BIN('4e25bdac-b5dd-11ed-86dc-0a0027000019'),20,'image.jpg','vinh@gmail.com','Luu Gia Vinh',0,'$2a$10$myYv1MVNX13oXYOKEzBKWeHFU0fsLVR.9kCG38siaXd.aZ3YC3Xty','0987652413',1,'vinh',UUID_TO_BIN('3ec14b5b-b5dd-11ed-86dc-0a0027000019'));
