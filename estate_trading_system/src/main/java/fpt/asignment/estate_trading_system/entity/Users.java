@@ -2,10 +2,7 @@ package fpt.asignment.estate_trading_system.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.UUID;
 
@@ -13,6 +10,7 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity
 public class Users {
 
@@ -26,7 +24,8 @@ public class Users {
     private String username;
 
     @JsonProperty("password")
-    @Column(length = 30, name = "password")
+    @Lob
+    @Column(name = "password")
     private String password;
 
     @JsonProperty("full_name")

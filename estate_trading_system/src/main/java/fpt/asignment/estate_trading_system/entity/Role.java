@@ -1,6 +1,7 @@
 package fpt.asignment.estate_trading_system.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,5 +25,6 @@ public class Role {
 
     @JsonProperty("name")
     @Column(length = 10, name = "name")
+    @Schema(example = "USER")
     private String name;
 }

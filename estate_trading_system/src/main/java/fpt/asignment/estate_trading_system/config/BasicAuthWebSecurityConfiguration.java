@@ -32,7 +32,7 @@ public class BasicAuthWebSecurityConfiguration {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.csrf().disable().authorizeRequests()
-                .requestMatchers("/user/**").authenticated()
+                .requestMatchers("/user/**").permitAll()
                 .and().httpBasic().and().exceptionHandling().authenticationEntryPoint(myBasicAuthenticationEntryPoint);
         return http.build();
     }
