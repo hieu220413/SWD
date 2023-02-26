@@ -62,9 +62,7 @@ public class SwaggerDocumentationConfig {
                     .name("MIT License")
                     .url("https://choosealicense.com/licenses/mit/"))
                 .contact(new io.swagger.v3.oas.models.info.Contact()
-                    .email("luugiavinh0@gmail.com")))
-                .components(new Components().addSecuritySchemes("basicScheme", new SecurityScheme()
-                        .type(SecurityScheme.Type.HTTP).scheme("basic")));
+                    .email("luugiavinh0@gmail.com")));
     }
 
 }
