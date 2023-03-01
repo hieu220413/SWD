@@ -34,7 +34,7 @@ public class Wallet {
 
     @JsonProperty("balance")
     @Column(name = "balance")
-    private int balance;
+    private long balance;
 
     @JsonProperty("status")
     @Column(name = "status")

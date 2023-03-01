@@ -33,6 +33,7 @@ public class BasicAuthWebSecurityConfiguration {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.csrf().disable().authorizeRequests()
                 .requestMatchers("/user/**").permitAll()
+                .requestMatchers("/subscription/create").authenticated()
                 .and().httpBasic().and().exceptionHandling().authenticationEntryPoint(myBasicAuthenticationEntryPoint);
         return http.build();
     }
