@@ -34,15 +34,20 @@ public class Bundle {
     @Column(name = "description")
     private String description;
 
-    @JsonProperty("price")
-    @Column(name = "price")
-    private int price;
+    @JsonProperty("min_price")
+    @Column(name = "min_price")
+    private int minPrice;
 
-    @JsonProperty("available")
-    @Column(name = "available")
-    private byte available;
+    @JsonProperty("max_price")
+    @Column(name = "max_price")
+    private int maxPrice;
+
+    @JsonProperty("available_quantity")
+    @Column(name = "available_quantity")
+    private int availableQuantity;
 
     @JsonProperty("status")
     @Column(name = "status")
     private byte status;
+
 }

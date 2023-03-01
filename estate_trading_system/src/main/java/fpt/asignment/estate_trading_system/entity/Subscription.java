@@ -55,6 +55,10 @@ public class Subscription {
     private Bundle bundle;
 
 
+    @JsonProperty("price")
+    @Column(name = "price")
+    private long price;
+
     @JsonProperty("expired_date")
     @Column(name = "expired_date")
     private Timestamp expiredDate;
@@ -67,4 +71,13 @@ public class Subscription {
     @Column(name = "status")
     private byte status;
 
+    public Subscription(Users users, Post post, Bundle bundle, long price, Timestamp expiredDate, Timestamp startDate, byte status) {
+        this.users = users;
+        this.post = post;
+        this.bundle = bundle;
+        this.price = price;
+        this.expiredDate = expiredDate;
+        this.startDate = startDate;
+        this.status = status;
+    }
 }

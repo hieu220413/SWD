@@ -60,7 +60,7 @@ public class Post {
 
     @JsonProperty("content")
     @Lob
-    @Column(name = "content")
+    @Column(name = "content",columnDefinition = "TEXT")
     private String content;
 
     @JsonProperty("area")
