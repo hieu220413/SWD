@@ -26,7 +26,7 @@ public class Post {
     @JsonProperty("users")
     @ManyToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinColumn(
             name = "user_id",
@@ -37,7 +37,7 @@ public class Post {
     @JsonProperty("tag_list")
     @ManyToMany(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinTable(name = "post_tag",
             joinColumns = @JoinColumn(name = "post_id"),
@@ -47,12 +47,18 @@ public class Post {
     @JsonProperty("image_list")
     @ManyToMany(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinTable(name = "post_image",
             joinColumns = @JoinColumn(name = "post_id"),
             inverseJoinColumns = @JoinColumn(name = "image_id"))
     private List<Image> imageList;
+
+    @JsonProperty("subscription_list")
+    @OneToMany(
+            mappedBy = "post"
+    )
+    private List<Subscription> subscriptionList;
 
     @JsonProperty("title")
     @Column(name = "title")

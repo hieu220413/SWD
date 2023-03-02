@@ -24,7 +24,7 @@ public class Wallet {
     @JsonProperty("users")
     @OneToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinColumn(
             name = "user_id",

@@ -1,5 +1,6 @@
 package fpt.asignment.estate_trading_system.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -24,7 +25,7 @@ public class Subscription {
     @JsonProperty("users")
     @ManyToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinColumn(
             name = "user_id",
@@ -33,9 +34,10 @@ public class Subscription {
     private Users users;
 
     @JsonProperty("post")
+    @JsonIgnore
     @ManyToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinColumn(
             name = "post_id",
@@ -46,7 +48,7 @@ public class Subscription {
     @JsonProperty("bundle")
     @ManyToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinColumn(
             name = "bundle_id",

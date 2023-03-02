@@ -52,10 +52,10 @@ public class SubscriptionServiceImpl implements SubscriptionService {
             throw new BundleNotFoundException("Bundle not found");
         if(postEntity == null)
             throw new PostNotFoundException("Post not found");
-        if(subscriptionRepository.findExistedPostSubscription(postEntity.getId().toString()) != null)
-            throw new SubscriptionForPostForbiddenException("Post already had an active subscription");
         if(postEntity.getUsers().getId() != userEntity.getId())
             throw new PostAuthorInvalidException("This user is not the author of the post");
+        if(subscriptionRepository.findExistedPostSubscription(postEntity.getId().toString()) != null)
+            throw new SubscriptionForPostForbiddenException("Post already had an active subscription");
         if(price > bundleEntity.getMaxPrice() || price < bundleEntity.getMinPrice())
             throw new OutOfRangePriceException("Price must be equal or higher than min price of bundle and be equal or lower than max price of bundle");
         if(bundleEntity.getAvailableQuantity() == 0)

@@ -12,7 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Users {
+public class Users  {
 
     @JsonProperty("id")
     @Id
@@ -33,7 +33,7 @@ public class Users {
     private String fullName;
 
     @JsonProperty("role")
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(
             name = "role_id",
             referencedColumnName = "id"
