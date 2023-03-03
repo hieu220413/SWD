@@ -1,5 +1,7 @@
-package fpt.asignment.estate_trading_system.common.config;
+package fpt.asignment.estate_trading_system.security.service;
 
+import fpt.asignment.estate_trading_system.security.utils.UserDetailsPrincipal;
+import fpt.asignment.estate_trading_system.security.model.UserDetailsPrincipalModel;
 import fpt.asignment.estate_trading_system.common.entity.Users;
 import fpt.asignment.estate_trading_system.common.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package fpt.asignment.estate_trading_system.bundle.service.impl;
+package fpt.asignment.estate_trading_system.users.service.impl;
 
 
 import fpt.asignment.estate_trading_system.common.entity.Users;
@@ -7,7 +7,7 @@ import fpt.asignment.estate_trading_system.common.model.UserCreateModel;
 import fpt.asignment.estate_trading_system.common.model.UserModel;
 import fpt.asignment.estate_trading_system.common.repository.RoleRepository;
 import fpt.asignment.estate_trading_system.common.repository.UserRepository;
-import fpt.asignment.estate_trading_system.bundle.service.UserService;
+import fpt.asignment.estate_trading_system.users.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

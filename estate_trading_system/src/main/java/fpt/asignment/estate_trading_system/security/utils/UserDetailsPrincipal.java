@@ -1,5 +1,6 @@
-package fpt.asignment.estate_trading_system.common.config;
+package fpt.asignment.estate_trading_system.security.utils;
 
+import fpt.asignment.estate_trading_system.security.model.UserDetailsPrincipalModel;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

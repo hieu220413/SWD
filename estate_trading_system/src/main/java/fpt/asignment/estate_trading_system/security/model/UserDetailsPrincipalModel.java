@@ -1,4 +1,4 @@
-package fpt.asignment.estate_trading_system.common.config;
+package fpt.asignment.estate_trading_system.security.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

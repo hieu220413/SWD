@@ -1,9 +1,9 @@
-package fpt.asignment.estate_trading_system.user.controller;
+package fpt.asignment.estate_trading_system.users.controller;
 
 import fpt.asignment.estate_trading_system.common.exception.InvalidUserCreateInputException;
 import fpt.asignment.estate_trading_system.common.model.UserCreateModel;
 import fpt.asignment.estate_trading_system.common.model.UserModel;
-import fpt.asignment.estate_trading_system.bundle.service.UserService;
+import fpt.asignment.estate_trading_system.users.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;

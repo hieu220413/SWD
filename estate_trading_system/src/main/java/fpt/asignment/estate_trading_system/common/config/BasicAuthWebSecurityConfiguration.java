@@ -1,5 +1,6 @@
 package fpt.asignment.estate_trading_system.common.config;
 
+import fpt.asignment.estate_trading_system.security.service.UserSecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
