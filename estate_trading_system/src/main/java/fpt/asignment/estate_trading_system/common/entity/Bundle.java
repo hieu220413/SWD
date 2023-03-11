@@ -36,11 +36,11 @@ public class Bundle {
 
     @JsonProperty("min_price")
     @Column(name = "min_price")
-    private int minPrice;
+    private long minPrice;
 
     @JsonProperty("max_price")
     @Column(name = "max_price")
-    private int maxPrice;
+    private long maxPrice;
 
     @JsonProperty("available_quantity")
     @Column(name = "available_quantity")

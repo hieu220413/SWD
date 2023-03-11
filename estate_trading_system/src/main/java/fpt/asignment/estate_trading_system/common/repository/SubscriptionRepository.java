@@ -1,6 +1,7 @@
 package fpt.asignment.estate_trading_system.common.repository;
 
 import fpt.asignment.estate_trading_system.common.entity.Subscription;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

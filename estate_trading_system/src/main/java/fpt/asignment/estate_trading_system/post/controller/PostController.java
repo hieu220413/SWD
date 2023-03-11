@@ -27,10 +27,10 @@ public class PostController {
     @RequestMapping(value = "/post/getWithAd",
             produces = "application/json",
             method = RequestMethod.GET)
-    public ResponseEntity<List<Post>> createSubscription(@Parameter(in = ParameterIn.DEFAULT, required = true, example = "0") @RequestParam int offset,
-                                                         @Parameter(in = ParameterIn.DEFAULT, required = true, example = "5") @RequestParam int limit,
+    public ResponseEntity<List<Post>> createSubscription(@Parameter(in = ParameterIn.DEFAULT, required = true, example = "0") @RequestParam int page,
+                                                         @Parameter(in = ParameterIn.DEFAULT, required = true, example = "8") @RequestParam int perPage,
                                                          @Parameter(in = ParameterIn.DEFAULT, required = true, example = "-1") @RequestParam int area
     ) {
-        return postService.findPostAdWithPagination(offset, limit, area);
+        return postService.findPostAdWithPagination(page, perPage, area);
     }
 }

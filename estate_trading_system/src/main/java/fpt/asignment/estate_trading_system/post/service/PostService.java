@@ -8,5 +8,5 @@ import java.util.List;
 public interface PostService {
     public List<Post> getPosts();
 
-    public ResponseEntity<List<Post>> findPostAdWithPagination(int limit, int offset, int area);
+    public ResponseEntity<List<Post>> findPostAdWithPagination(int page, int perPage, int area);
 }

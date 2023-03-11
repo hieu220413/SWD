@@ -2,7 +2,6 @@ package fpt.asignment.estate_trading_system.subscription.controller;
 
 
 import fpt.asignment.estate_trading_system.common.exception.*;
-import fpt.asignment.estate_trading_system.exception.*;
 import fpt.asignment.estate_trading_system.subscription.service.SubscriptionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

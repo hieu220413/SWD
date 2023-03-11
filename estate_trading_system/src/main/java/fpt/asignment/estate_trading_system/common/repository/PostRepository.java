@@ -1,6 +1,7 @@
 package fpt.asignment.estate_trading_system.common.repository;
 
 import fpt.asignment.estate_trading_system.common.entity.Post;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -19,7 +20,7 @@ public interface PostRepository extends JpaRepository<Post, UUID> {
             "        INNER JOIN Users users ON post.users.id = users.id\n" +
             "        WHERE post.status = 1  AND sub.status = 1 AND sub.expiredDate > CURRENT_TIMESTAMP  AND post.id = sub.post.id AND CASE WHEN :area = -1 THEN TRUE ELSE ( post.area = :area ) END \n" +
             "        ORDER BY bundle.tier ASC, sub.price DESC, sub.startDate ASC\n")
-    List<Post> findPostAdWithPagination(@Param("area") int area);
+    List<Post> findPostAdWithPagination(@Param("area") int area, Pageable pageable);
 }
 
 

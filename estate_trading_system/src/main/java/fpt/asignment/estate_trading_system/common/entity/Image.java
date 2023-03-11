@@ -20,7 +20,8 @@ public class Image {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @JsonProperty("name")
-    @Column(length = 30, name = "name")
-    private String name;
+    @JsonProperty("url")
+    @Lob
+    @Column(name = "url")
+    private String url;
 }
